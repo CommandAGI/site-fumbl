@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Privacy | Fumbl</title>
+<meta name="description" content="What Fumbl keeps, why, for how long and who sees it; your age check; your rights.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="mark.svg" alt="" width="34" height="34">fumbl</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="safety.html">Safety</a>
+      <a href="app/live.html">Join</a>
+      <a href="app/">Try the demo</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <article class="prose">
+    <h1>Privacy notice</h1>
+    <p class="muted">Last updated 23 October 2026.</p>
+    <p>CommandAGI INC runs Fumbl and decides how your data is used. This notice says what we keep, why, for how long, and who sees it. To ask about it, or to use a right below, write to hello@fumbl.commandagi.com, or use the buttons under You in the app.</p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li>We never sell your data, never share it for advertising, and run no ad trackers.</li>
+      <li>We keep the result of your age check, never your ID or your selfie.</li>
+      <li>Other members never see your gender or whom you want to meet. We use them only to match you.</li>
+      <li>Only the two people in a chat read it.</li>
+      <li>You can download or delete your Fumbl data at any time, with one tap.</li>
+    </ul>
+
+    <h2>What we keep</h2>
+    <table>
+      <thead><tr><th>What</th><th>Why</th><th>How long</th></tr></thead>
+      <tbody>
+        <tr><td>Your CommandAGI account (email, name)</td><td>To sign you in</td><td>Until you delete the account</td></tr>
+        <tr><td>Your date of birth, as you type it when you join</td><td>To refuse anyone under 18</td><td>Not kept: used once, then dropped</td></tr>
+        <tr><td>Your age check result: adult or not, and when</td><td>Adults only (rule 1)</td><td>Until you delete your CommandAGI account</td></tr>
+        <tr><td>Your profile: first name, pronouns, what you look for, your answers</td><td>To show you to other members</td><td>Until you change or delete it</td></tr>
+        <tr><td>Your gender and whom you want to meet</td><td>Only to choose whom to show you, and to whom. This can reveal your sexual orientation, which the law calls sensitive data, so we ask for your clear consent first</td><td>Until you change or delete it</td></tr>
+        <tr><td>Likes, passes and matches</td><td>Matching</td><td>Until you delete your data</td></tr>
+        <tr><td>Messages</td><td>The chat</td><td>Until either of you unmatches, blocks, or deletes your data</td></tr>
+        <tr><td>Blocks you made</td><td>So you never see that person</td><td>Until you delete your data</td></tr>
+        <tr><td>Reports you made, reports about you, and their decisions</td><td>Safety</td><td>Kept after you delete your data, for the time our legal review sets (see below)</td></tr>
+      </tbody>
+    </table>
+    <p>Your profile is a file in your own CommandAGI Drive (<code>Fumbl/profile.json</code>). You can open, change or delete it there too. Do not put health details, your address or your phone number in it.</p>
+
+    <h2 id="age">Your age check and biometric data</h2>
+    <ul>
+      <li>Stripe checks your age for us. It takes a photo of your ID and a selfie, and compares your face with the ID photo. Comparing faces uses face geometry, which Illinois, Texas and other states call biometric data.</li>
+      <li>Before the check, we ask for your written consent (a tick box in the app).</li>
+      <li>Fumbl itself never gets your ID photo, your selfie or your face geometry. From the result we keep only "adult" or "not an adult", and when.</li>
+      <li>CommandAGI also keeps a one-way code made from your verified name, date of birth and ID number, which cannot be turned back into them. It lets us stop a person we removed for a serious reason from joining again with a new account. The check also marks your CommandAGI account as identity-verified.</li>
+      <li>When the result is in, we ask Stripe to delete your ID images, your selfie and what it read from them. Stripe deletes biometric data within one year in any case. Stripe also acts as its own controller for some identity data; see Stripe's privacy policy.</li>
+    </ul>
+
+    <h2>Who sees what</h2>
+    <ul>
+      <li><strong>Other members</strong> see your first name, pronouns, what you are looking for, your answers and a "Verified adult" label. A member sees you only if you are each what the other wants to meet, and neither blocked the other.</li>
+      <li><strong>Your match</strong> reads the chat you share. No one else does.</li>
+      <li><strong>Our safety team</strong> reads a report and only the messages the reporter chose to send with it. An AI agent may sort reports; a person decides the urgent ones.</li>
+      <li><strong>Our providers</strong>: Cloudflare hosts Fumbl and stores its data; Stripe checks age. They use your data only to provide their service to us.</li>
+      <li><strong>The law</strong>: we report child sexual exploitation to NCMEC, as US law requires; we may tell the police when a life is at risk; and we answer valid legal requests.</li>
+    </ul>
+
+    <h2>How we protect it</h2>
+    <p>Everything travels encrypted (HTTPS). Our storage provider encrypts the data it stores. Our staff and agents have no screen that shows chats.</p>
+
+    <h2>Your rights</h2>
+    <ul>
+      <li><strong>See and download</strong> everything Fumbl holds about you: "Download my data" under You.</li>
+      <li><strong>Delete</strong> it at once: "Delete my Fumbl data" under You. Your profile, likes, matches, chats and blocks go at once. What stays: reports and their decisions (safety records), blocks other members made of you (their choice), and, if we refused, suspended or removed you, that fact (so that deleting is not a way back in).</li>
+      <li><strong>Correct</strong> your profile at any time.</li>
+      <li><strong>Withdraw your consent</strong> to matching by deleting your profile.</li>
+      <li>Depending on your state (for example California, Colorado, Connecticut, Virginia or Texas), you have more rights, such as to limit the use of sensitive data. We use sensitive data only to match you, which is the use you asked for, and never sell or share it. Write to us to use any right; we will not treat you differently for it.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Fumbl is not for anyone under 18. We refuse anyone whose date of birth or age check says they are under 18. If we learn that a minor joined, we end the membership at once.</p>
+
+    <h2>Email and messages from us</h2>
+    <p>Fumbl sends no marketing email. Notices about your account and your safety, such as a report's decision or a warning about a member we removed for fraud, appear in the app.</p>
+
+    <h2>Retention of safety records</h2>
+    <p>We keep reports and their decisions to protect members and to meet our legal duties. Our legal review sets how long; until then we keep them, and no one uses them for anything but safety.</p>
+
+    <h2>Changes</h2>
+    <p>If we change this notice, we tell you in the app before the change applies.</p>
+  </article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Fumbl, a company of CommandAGI &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; hello@fumbl.commandagi.com</span>
+    <span><a href="index.html">Home</a> &middot; <a href="app/">Demo</a> &middot; <a href="about.html">About</a> &middot; <a href="team.html">Team</a></span>
+  </div>
+</footer>
+</body>
+</html>

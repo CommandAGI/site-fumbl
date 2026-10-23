@@ -71,7 +71,7 @@ function ageOn(dob, today = new Date()) {
 function gate() {
   show(`<h1>First, your date of birth</h1>
   <form class="panel" id="gate" novalidate>
-    <p class="muted">Fumbl is for adults aged 18 and over. We ask for your date of birth, not a tick box. In the live app we will also check age properly before you can meet anyone.</p>
+    <p class="muted">Fumbl is for adults aged 18 and over. We ask for your date of birth, not a tick box. To <a href="live.html">join for real</a>, you also pass an ID age check before anyone sees you.</p>
     <label class="field">Date of birth<input type="date" id="dob" required autocomplete="bday"></label>
     <p class="error" id="gate-error" role="alert"></p>
     <button class="btn primary" type="submit">Continue</button>

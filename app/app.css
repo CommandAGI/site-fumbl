@@ -62,3 +62,17 @@ dialog h2 { margin: 0 0 6px; color: var(--plum); font-size: 1.3rem; }
 .reasons { border: 0; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
 .reasons label { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; }
 .toast { margin: 12px 0; padding: 12px 14px; border-radius: 14px; background: var(--soft); }
+
+/* the live app */
+.initial { display: inline-grid; place-items: center; border-radius: 50%; background: var(--plum); color: var(--bg); font-weight: 800; flex: none; }
+@media (prefers-color-scheme: dark) { .initial { color: #1b1220; } }
+.no-checks.small { margin: 14px 0 0; color: var(--muted); }
+.notice-box { background: var(--soft); border-radius: 16px; padding: 12px 16px; margin: 14px 0; }
+.notice-box h2 { font-size: 1.05rem; margin: 0 0 6px; color: var(--plum); }
+.small-print { font-size: 0.9rem; margin: 6px 0; }
+.pill.urgent { background: var(--coral); color: var(--coral-text); }
+.review { margin: 14px 0; }
+.check a { color: var(--coral); }
+.check:has(span) { align-items: flex-start; }
+.check > input { flex: none; margin-top: 4px; }
+.check > span { flex: 1; min-width: 0; }

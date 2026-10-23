@@ -83,6 +83,11 @@ img { max-width: 100%; }
 .prose h1 { color: var(--plum); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 12px; }
 .prose h2 { color: var(--plum); margin-top: 34px; }
 .prose li { margin: 6px 0; }
+.prose h3 { color: var(--plum); margin: 22px 0 6px; font-size: 1.15rem; }
+.prose table { border-collapse: collapse; width: 100%; font-size: 0.95rem; display: block; overflow-x: auto; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+/* Texas Bus. & Com. Code 106.004 and N.J.S.A. 56:8-171: bold capitals of at least 12-point type. */
+.no-checks { font-weight: 800; font-size: 12pt; text-transform: uppercase; line-height: 1.4; overflow-wrap: anywhere; }
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: minmax(0, 1fr); padding-top: 20px; }

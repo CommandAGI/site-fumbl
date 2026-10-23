@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Safety | Fumbl</title>
-<meta name="description" content="Fumbl's safety rules: adults only, consent before anything is shared, report and block, private messages, no dark patterns.">
+<meta name="description" content="Fumbl's safety notice, tips for meeting someone, where to get help, and our rules: adults only, consent, report and block, private messages, no dark patterns.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
 </head>
@@ -17,6 +17,7 @@
     <nav class="site-nav" aria-label="Site">
       <a href="index.html">Home</a>
       <a href="safety.html" aria-current="page">Safety</a>
+      <a href="app/live.html">Join</a>
       <a href="app/">Try the demo</a>
       <a href="about.html">About</a>
       <a href="team.html">Team</a>
@@ -26,50 +27,80 @@
 
 <main id="main" class="wrap">
   <article class="prose">
-    <h1>Our safety rules</h1>
-    <p>These rules come before every feature. If a feature breaks one, it does not ship.</p>
+    <h1>Safety</h1>
+    <p>Our safety rules come before every feature. If a feature breaks one, it does not ship. This page has our safety notice, tips for meeting someone, where to get help, and the rules.</p>
 
-    <h2>1. Adults only</h2>
-    <p>You must be 18 or older, or older where your local law says so. We ask for your date of birth. If you are under the age, we tell you plainly that Fumbl is for adults. Before Fumbl takes real members, we will check age with an identity check or an age estimate, and we will keep only the result, never your document.</p>
+    <h2 id="notice">Safety notice</h2>
+    <p class="no-checks"><strong>FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong></p>
+    <p>We check that every member is an adult, with an ID and a selfie through Stripe. That check tells us a person's age. It does not tell us their history, and it cannot promise that a person is who they say they are. Be careful with everyone you meet online.</p>
 
-    <h2>2. Consent before anything is shared</h2>
+    <h2 id="tips">Tips for meeting someone</h2>
+    <ul>
+      <li><strong>Keep the chat on Fumbl</strong> until you trust the person. Report and block work only here.</li>
+      <li><strong>Never send money</strong>, gift cards, crypto, or your bank or card details, to anyone you met online, whatever the story. A request for money is the most common sign of a romance scam.</li>
+      <li><strong>Talk on a video call first.</strong> Someone who always has a reason not to show their face may not be who they say.</li>
+      <li><strong>Meet in a busy public place</strong>, and stay in public the first few times.</li>
+      <li><strong>Tell a friend</strong> where you are going, whom you are meeting and when you will be back.</li>
+      <li><strong>Get there and back on your own.</strong> Keep your phone charged.</li>
+      <li><strong>Keep your drink with you</strong>, and leave if you feel unsafe. You do not owe anyone an explanation.</li>
+      <li><strong>Do not share</strong> your home address, your workplace or your schedule before you know someone well.</li>
+    </ul>
+
+    <h2 id="help">Where to get help (United States)</h2>
+    <ul>
+      <li>In danger now: call <strong>911</strong>.</li>
+      <li>National Domestic Violence Hotline: <strong>1-800-799-7233</strong>, or text START to 88788.</li>
+      <li>RAINN, the National Sexual Assault Hotline: <strong>1-800-656-4673</strong>.</li>
+      <li>988 Suicide and Crisis Lifeline: call or text <strong>988</strong>.</li>
+      <li>A romance scam: report it to the FTC at reportfraud.ftc.gov and to the FBI at ic3.gov, and report the profile on Fumbl.</li>
+      <li>An intimate image shared without your consent: StopNCII.org (adults) helps block it on many platforms; NCMEC's Take It Down (takeitdown.ncmec.org) helps for images taken before 18.</li>
+      <li>A child at risk: the NCMEC CyberTipline, report.cybertip.org or 1-800-843-5678.</li>
+    </ul>
+
+    <h2>Our rules</h2>
+    <h3>1. Adults only</h3>
+    <p>You must be 18 or older and in the United States. We ask for your date of birth, then check your age with an ID and a selfie. We keep only the result, never your ID, your selfie or the date on it. A person under 18 is told plainly that Fumbl is for adults and cannot join.</p>
+
+    <h3>2. Consent before anything is shared</h3>
     <ul>
       <li>No one can message you before you both liked each other.</li>
-      <li>Photos in a chat stay off until both people turn them on for that chat.</li>
+      <li>Fumbl has no photos for now: no profile photos and no photos in chats. This keeps out fake photos and images shared without consent until we can screen them.</li>
       <li>We never share your contact details or your location. Only you can share them.</li>
-      <li>An image that may be explicit arrives blurred, and you choose whether to see it.</li>
+      <li>Other members never see your gender or whom you want to meet. We use them only to match you.</li>
     </ul>
 
-    <h2>3. Report and block, one tap from anywhere</h2>
+    <h3>3. Report and block, one tap from anywhere</h3>
     <ul>
       <li><strong>Block</strong> takes effect at once. You disappear from each other, the chat closes, and the other person is not told.</li>
-      <li><strong>Report</strong> asks for a reason: someone under 18, harassment or threats, an intimate image shared without consent, a scam or a request for money, a fake profile, hate, or something else. You can add a note.</li>
-      <li>Every report gets a decision with the rule it rests on and a plain reason, and we tell you the outcome.</li>
-      <li>A report of someone under 18, a threat of violence, or an intimate image shared without consent goes first, and the account is suspended until a person reviews it.</li>
+      <li><strong>Report</strong> asks for a reason: someone under 18, harassment or threats, an intimate image shared without consent, sexual exploitation or trafficking, a scam or a request for money, a fake profile, hate, or something else. You can add a note, and from a chat you can send your last 20 messages with it.</li>
+      <li>Every report gets a decision with the rule it rests on and a plain reason, and we tell you the outcome in the app.</li>
+      <li>A report of someone under 18, a threat, an intimate image shared without consent, or sexual exploitation goes first. The account is on hold at once, and a person on our safety team decides. An AI agent may sort reports, but it never decides these.</li>
+      <li>We report child sexual exploitation to NCMEC, as US law requires, and we contact the police when a life is at risk.</li>
+      <li>When we remove a member for fraud, we tell everyone they wrote to.</li>
     </ul>
 
-    <h2>4. Your messages are private</h2>
-    <p>Only the two people in a chat read it. Our safety team reads a chat only when one of you reports it, and only the reported part. Messages are encrypted in transit and at rest, never used for ads, never sold, and deleted with your account.</p>
+    <h3>4. Your messages are private</h3>
+    <p>Only the two people in a chat read it. Our safety team reads only what a reporter sends with a report. Messages are encrypted in transit and stored encrypted, never used for ads, never sold, and deleted when either of you unmatches, blocks or deletes your data.</p>
 
-    <h2>5. No dark patterns</h2>
+    <h3>5. No dark patterns</h3>
     <ul>
-      <li>Like and pass are the same size.</li>
+      <li>Fumbl is free. Like and pass are the same size.</li>
       <li>No countdowns, streaks, "last chance" offers or fake activity.</li>
       <li>No blurred "someone liked you" to make you pay.</li>
-      <li>Unmatch, block, report, pause and delete each start with one tap. Cancelling is never harder than buying.</li>
+      <li>Unmatch, block, report, pause and delete each start with one tap.</li>
     </ul>
 
-    <h2>6. Real people only, and no pretending</h2>
-    <p>Our team are AI agents, and they say so. They never pose as members, and no bot is ever shown to you as a person. In the demo, every profile is a fictional sample, drawn as an illustration and marked "Sample profile".</p>
+    <h3>6. Real people only, and no pretending</h3>
+    <p>Every member is a person who passed the age check. Our team are AI agents, and they say so. They never pose as members, never date, and no bot is ever shown to you as a person. In the demo, every profile is a fictional sample, drawn as an illustration and marked "Sample profile".</p>
 
-    <h2>7. Watch for scams</h2>
-    <p>If someone asks you for money, gift cards or crypto, or asks you to move to another app soon after you match, Fumbl shows you a safety note and the report button. Never send money to someone you have not met.</p>
+    <h3>7. Watch for scams</h3>
+    <p>If someone asks you for money, gift cards or crypto, or asks you to move to another app soon after you match, Fumbl shows you a safety note and the report button.</p>
   </article>
 </main>
 
 <footer class="site-foot">
   <div class="wrap">
-    <span>Fumbl, a company of CommandAGI</span>
+    <span>Fumbl, a company of CommandAGI &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; hello@fumbl.commandagi.com</span>
     <span><a href="index.html">Home</a> &middot; <a href="app/">Demo</a> &middot; <a href="about.html">About</a> &middot; <a href="team.html">Team</a></span>
   </div>
 </footer>
