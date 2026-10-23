@@ -1,0 +1,64 @@
+/* The demo app. Shares ../style.css's colours. */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hidden { display: none !important; }
+.muted { color: var(--muted); }
+.demo-banner { margin: 0; background: var(--plum); color: var(--bg); text-align: center; font-size: 0.9rem; padding: 8px 16px; }
+@media (prefers-color-scheme: dark) { .demo-banner { color: #1b1220; } }
+.app-head { max-width: 560px; margin: 0 auto; padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.app-head .brand { font-size: 1.25rem; }
+.app-head .brand img { width: 30px; height: 30px; }
+.tabs { display: flex; gap: 4px; background: var(--soft); border-radius: 999px; padding: 4px; }
+.tabs button { border: 0; background: transparent; color: var(--muted); font: 700 0.92rem var(--sans); padding: 8px 14px; border-radius: 999px; cursor: pointer; }
+.tabs button[aria-current="page"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+.app-main { max-width: 560px; margin: 0 auto; padding: 8px 16px 48px; outline: none; }
+.app-main h1 { font-size: 1.6rem; line-height: 1.2; color: var(--plum); margin: 12px 0 8px; letter-spacing: -0.02em; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
+.field { display: flex; flex-direction: column; gap: 6px; font-weight: 700; font-size: 0.95rem; margin: 14px 0; }
+.field input, .field select, .field textarea, .compose input { font: 400 1rem var(--sans); padding: 10px 12px; border: 2px solid var(--line); border-radius: 14px; background: var(--bg); color: var(--text); min-width: 0; width: 100%; }
+.field small { font-weight: 400; color: var(--muted); }
+.error { color: var(--coral); font-weight: 700; min-height: 1.4em; margin: 4px 0; }
+.check { display: flex; gap: 8px; align-items: center; margin: 10px 0; }
+.check input, .reasons input { accent-color: var(--coral); width: 18px; height: 18px; }
+
+/* a profile card */
+.profile { background: var(--surface); border: 1px solid var(--line); border-radius: 26px; overflow: hidden; }
+.profile .pic { position: relative; background: var(--soft); display: flex; justify-content: center; padding: 18px; }
+.profile .pic svg { width: min(100%, 240px); height: auto; }
+.pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em; background: var(--plum); color: var(--bg); }
+@media (prefers-color-scheme: dark) { .pill { color: #1b1220; } }
+.profile .pic .pill { position: absolute; top: 14px; left: 14px; }
+.profile .body { padding: 16px 20px 20px; }
+.profile h2 { margin: 0; font-size: 1.5rem; color: var(--text); }
+.profile .meta { color: var(--muted); margin: 2px 0 10px; }
+.prompt { background: var(--soft); border-radius: 16px; padding: 12px 14px; margin: 10px 0; }
+.prompt b { display: block; font-size: 0.85rem; color: var(--muted); }
+.decide { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.decide .btn { width: 100%; }
+.safety-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+.linkish { border: 0; background: none; color: var(--muted); font: 700 0.9rem var(--sans); text-decoration: underline; cursor: pointer; padding: 6px 4px; }
+.linkish:hover { color: var(--coral); }
+
+/* matches and chat */
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.list button { width: 100%; display: flex; align-items: center; gap: 12px; text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 10px 14px; cursor: pointer; color: var(--text); font: inherit; }
+.list svg { width: 52px; height: 52px; flex: none; }
+.list small { display: block; color: var(--muted); }
+.chat-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.chat-head svg { width: 44px; height: 44px; }
+.chat-head .who { flex: 1; min-width: 120px; }
+.chat-tools { display: flex; flex-wrap: wrap; gap: 2px; }
+.messages { list-style: none; padding: 0; margin: 14px 0; display: flex; flex-direction: column; gap: 8px; }
+.messages li { max-width: 82%; padding: 10px 14px; border-radius: 18px; background: var(--soft); overflow-wrap: anywhere; }
+.messages li.mine { align-self: flex-end; background: var(--coral); color: var(--coral-text); }
+.messages li small { display: block; font-size: 0.75rem; opacity: 0.8; font-weight: 700; }
+.consent { font-size: 0.9rem; background: var(--soft); border-radius: 14px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.warn { background: var(--warn-bg); color: var(--warn-text); border-radius: 14px; padding: 10px 12px; font-size: 0.92rem; margin: 10px 0; }
+.compose { display: flex; gap: 8px; margin-top: 12px; }
+.compose .btn { flex: none; }
+
+dialog { border: 0; border-radius: 22px; padding: 22px; max-width: min(92vw, 460px); width: 100%; background: var(--surface); color: var(--text); }
+dialog::backdrop { background: rgba(20, 8, 24, 0.55); }
+dialog h2 { margin: 0 0 6px; color: var(--plum); font-size: 1.3rem; }
+.reasons { border: 0; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
+.reasons label { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; }
+.toast { margin: 12px 0; padding: 12px 14px; border-radius: 14px; background: var(--soft); }

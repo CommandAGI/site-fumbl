@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" role="img" aria-label="An illustration: two people say hello, with a shield between them">
+  <ellipse cx="190" cy="270" rx="160" ry="18" fill="#e2553f" fill-opacity="0.12"/>
+  <!-- left person -->
+  <path d="M60 268c0-52 22-84 56-84s56 32 56 84z" fill="#4a1d4f"/>
+  <circle cx="116" cy="140" r="38" fill="#c98b6b"/>
+  <path d="M78 138c0-28 18-44 40-44s38 14 38 36c-14-10-34-14-52-8-10 4-18 10-26 16z" fill="#2a1530"/>
+  <circle cx="104" cy="146" r="3.5" fill="#2a1530"/>
+  <circle cx="128" cy="146" r="3.5" fill="#2a1530"/>
+  <path d="M106 160q10 8 20 0" stroke="#2a1530" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- right person -->
+  <path d="M208 268c0-50 22-82 56-82s56 32 56 82z" fill="#e2553f"/>
+  <circle cx="264" cy="142" r="38" fill="#f1c7a6"/>
+  <path d="M226 150c-4-34 14-56 40-56 24 0 40 18 38 46-6-14-18-24-34-26-14 10-30 18-44 36z" fill="#7a3f2a"/>
+  <circle cx="252" cy="148" r="3.5" fill="#2a1530"/>
+  <circle cx="276" cy="148" r="3.5" fill="#2a1530"/>
+  <path d="M254 162q10 8 20 0" stroke="#2a1530" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- speech -->
+  <path d="M52 40h96a16 16 0 0 1 16 16v26a16 16 0 0 1-16 16h-58l-16 14v-14h-22a16 16 0 0 1-16-16v-26a16 16 0 0 1 16-16z" fill="#ffffff" stroke="#ecd6cb" stroke-width="2"/>
+  <text x="100" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#4a1d4f">hi!</text>
+  <path d="M232 28h96a16 16 0 0 1 16 16v26a16 16 0 0 1-16 16h-22v14l-16-14h-58a16 16 0 0 1-16-16v-26a16 16 0 0 1 16-16z" fill="#ffffff" stroke="#ecd6cb" stroke-width="2"/>
+  <text x="280" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#e2553f">oh, hi</text>
+  <!-- shield -->
+  <path d="M190 160l26 10v20c0 18-12 30-26 36-14-6-26-18-26-36v-20z" fill="#1e7a5a"/>
+  <path d="M179 194l8 8 15-17" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

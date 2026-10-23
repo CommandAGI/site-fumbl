@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Demo | Fumbl</title>
+<meta name="description" content="The Fumbl demo: an age gate, fictional sample profiles, matching, private chat, report and block. Nothing leaves your browser.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="app.css">
+<link rel="icon" href="../mark.svg" type="image/svg+xml">
+</head>
+<body class="app">
+<a class="skip" href="#view">Skip to the app</a>
+<p class="demo-banner" role="note"><strong>Demo.</strong> Every profile is a fictional sample. Nothing you do leaves this browser.</p>
+<header class="app-head">
+  <a class="brand" href="../index.html"><img src="../mark.svg" alt="" width="30" height="30">fumbl</a>
+  <nav class="tabs hidden" id="tabs" aria-label="App">
+    <button type="button" data-tab="discover">Discover</button>
+    <button type="button" data-tab="matches">Matches</button>
+    <button type="button" data-tab="settings">You</button>
+  </nav>
+</header>
+
+<main id="view" class="app-main" tabindex="-1"></main>
+
+<dialog id="report-dialog" aria-labelledby="report-title">
+  <form method="dialog" id="report-form">
+    <h2 id="report-title">Report <span id="report-name"></span></h2>
+    <p class="muted">Why are you reporting? Choose one.</p>
+    <fieldset class="reasons">
+      <legend class="sr">Reason</legend>
+      <label><input type="radio" name="reason" value="minor" required> They may be under 18</label>
+      <label><input type="radio" name="reason" value="threat"> Harassment or threats</label>
+      <label><input type="radio" name="reason" value="intimate-image"> An intimate image shared without consent</label>
+      <label><input type="radio" name="reason" value="scam"> A scam or a request for money</label>
+      <label><input type="radio" name="reason" value="fake"> A fake profile or impersonation</label>
+      <label><input type="radio" name="reason" value="hate"> Hate</label>
+      <label><input type="radio" name="reason" value="other"> Something else</label>
+    </fieldset>
+    <label class="field">A note (optional)<textarea name="note" rows="3" maxlength="500"></textarea></label>
+    <label class="check"><input type="checkbox" name="block"> Also block them</label>
+    <div class="btns">
+      <button class="btn" value="cancel" formnovalidate>Cancel</button>
+      <button class="btn primary" value="send">Send report</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="confirm-dialog" aria-labelledby="confirm-title">
+  <form method="dialog">
+    <h2 id="confirm-title"></h2>
+    <p id="confirm-text"></p>
+    <div class="btns">
+      <button class="btn" value="cancel">Cancel</button>
+      <button class="btn primary" value="ok" id="confirm-ok"></button>
+    </div>
+  </form>
+</dialog>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
