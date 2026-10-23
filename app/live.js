@@ -147,9 +147,37 @@ function underage() {
   <a class="btn" href="../index.html">Back to the home page</a></div>`);
 }
 
+const RULES = ["1 adults only", "2 consent", "3 report and block", "4 no real people's data", "5 private messages", "6 no dark patterns", "7 agents do not date", "8 scams"];
+const ruleName = (n) => RULES.find((x) => x[0] === String(n)) ?? String(n ?? "");
+
 function ended() {
-  show(`<h1>Your membership has ended</h1><div class="panel"><p>A person on our safety team removed your Fumbl membership after a report. You can download your data or delete it.</p>
-  <p class="muted">If you think this is wrong, write to hello@fumbl.commandagi.com.</p><div class="btns"><button class="btn" id="export">Download my data</button><button class="btn" id="delete">Delete my Fumbl data</button></div></div>`);
+  const why = me.removal ?? {};
+  const appeal = why.appeal;
+  const appealPart = !why.report
+    ? ""
+    : !appeal
+      ? `<form id="appeal" class="notice-box" novalidate>
+      <h2>Ask us to look again</h2>
+      <p>If you think this is wrong, tell us why. A person on our safety team who reads your appeal decides it and tells you here. You can appeal once.</p>
+      <label class="field">Why the decision is wrong<textarea id="appeal-text" rows="4" maxlength="2000" required></textarea></label>
+      <p class="error" id="appeal-error" role="alert"></p>
+      <button class="btn primary" type="submit">Send my appeal</button>
+    </form>`
+      : appeal.status === "open"
+        ? `<p class="toast" role="status"><strong>Your appeal is with our safety team.</strong> A person decides it, and you read the decision here.</p>`
+        : `<p class="toast" role="status"><strong>Your appeal was decided: the removal ${appeal.outcome === "upheld" ? "stays" : "is lifted"}.</strong> ${esc(appeal.reason)}</p>`;
+  show(`<h1>Your membership has ended</h1><div class="panel"><p>A person on our safety team removed your Fumbl membership after a report.</p>
+  ${why.reason ? `<p><strong>Why:</strong> ${esc(why.reason)} <span class="muted">(rule ${esc(ruleName(why.rule))})</span></p>` : ""}
+  ${appealPart}
+  <p class="muted">You can download your data or delete it.</p><div class="btns"><button class="btn" id="export">Download my data</button><button class="btn" id="delete">Delete my Fumbl data</button></div></div>`);
+  on("appeal", "submit", async (e) => {
+    e.preventDefault();
+    const text = document.getElementById("appeal-text").value.trim();
+    if (!text) return (document.getElementById("appeal-error").textContent = "Write why you think the decision is wrong.");
+    const r = await api("POST", "/fumbl/me/appeal", { text });
+    if (r.error && r.error !== "already_appealed") return (document.getElementById("appeal-error").textContent = "Your appeal could not be sent. Try again later.");
+    route();
+  });
   wireDataButtons();
 }
 
@@ -302,6 +330,11 @@ async function chat(p) {
     const text = document.getElementById("msg").value.trim();
     if (!text) return;
     const s = await api("POST", `/fumbl/matches/${encodeURIComponent(p.id)}/messages`, { body: text });
+    document.getElementById("slow")?.remove();
+    if (s.error === "slow_down") {
+      document.getElementById("compose").insertAdjacentHTML("afterend", `<p class="error" id="slow" role="alert">You are sending messages very fast. Wait a little, then send again. Your message is still in the box.</p>`);
+      return;
+    }
     if (s.error) return matches();
     await chat(p);
     document.getElementById("msg")?.focus();
@@ -410,7 +443,24 @@ async function you() {
 async function review() {
   const q = await api("GET", "/fumbl/reports");
   if (q.error) return discover();
-  const rules = ["1 adults only", "2 consent", "3 report and block", "4 no real people's data", "5 private messages", "6 no dark patterns", "7 agents do not date", "8 scams"];
+  const ap = await api("GET", "/fumbl/appeals");
+  const rules = RULES;
+  const appeals = ap.appeals ?? [];
+  const appealForms = appeals.length
+    ? `<h2>Appeals to decide</h2>${appeals
+        .map(
+          (a, i) => `<form class="panel appeal" data-i="${i}">
+      <p><strong>${esc(a.firstName ?? a.user)}</strong> appeals a removal <small class="muted">${new Date(a.createdAt).toLocaleString()}</small></p>
+      ${a.decision ? `<p class="muted">The decision: ${esc(a.decision.reason)}, rule ${esc(ruleName(a.decision.rule))}. ${esc(a.decision.decisionReason)}</p>` : ""}
+      <p>Their appeal: ${esc(a.text)}</p>
+      <label class="field">Outcome<select name="outcome" required><option value="">Choose</option><option value="upheld">Keep the removal</option><option value="overturned">Lift the removal</option></select></label>
+      <label class="field">Reason, in plain words (the member reads it)<textarea name="reason" rows="2" required maxlength="1000"></textarea></label>
+      <p class="error" role="alert"></p>
+      <button class="btn primary" type="submit">Decide the appeal</button>
+    </form>`,
+        )
+        .join("")}`
+    : "";
   show(`<h1>Reports to decide</h1>${
     q.reports.length
       ? q.reports.map((r, i) => `<form class="panel review" data-i="${i}">
@@ -425,13 +475,21 @@ async function review() {
       <button class="btn primary" type="submit">Decide</button>
     </form>`).join("")
       : `<div class="panel"><p>No open reports.</p></div>`
-  }`, "review");
+  }${appealForms}`, "review");
   for (const f of view.querySelectorAll("form.review"))
     f.addEventListener("submit", async (e) => {
       e.preventDefault();
       const d = new FormData(f);
       const r = q.reports[Number(f.dataset.i)];
       await api("POST", `/fumbl/reports/${r.id}/decision`, { action: d.get("action"), rule: d.get("rule"), reason: d.get("reason"), authority: d.get("authority") || null });
+      review();
+    });
+  for (const f of view.querySelectorAll("form.appeal"))
+    f.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const d = new FormData(f);
+      const r = await api("POST", `/fumbl/appeals/${appeals[Number(f.dataset.i)].id}/decision`, { outcome: d.get("outcome"), reason: d.get("reason") });
+      if (r.error === "another_reviewer_decides") return (f.querySelector(".error").textContent = "You decided this removal, so another reviewer decides its appeal.");
       review();
     });
 }
