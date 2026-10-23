@@ -1,0 +1,47 @@
+[
+  {
+    "image": "people/lourdes-villanueva.jpg",
+    "subject": "Lourdes Villanueva, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Filipina woman, late forties, shoulder-length black hair with a side part, a white blouse with a small embroidered collar, a wristwatch. Under the awning of a small corner store on a Cebu street at midday, holding a clipboard, mid-laugh, a candid phone photo. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/hevin-karim.jpg",
+    "subject": "Hevin Karim, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Kurdish woman, late twenties, long dark hair in a low braid, a sage-green cardigan, a thin silver ring. At a small café table in the evening, a glass of tea beside her laptop, laughing at something off camera, taken on a friend's phone. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/ling-wu.jpg",
+    "subject": "Ling Wu, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Han Chinese woman, late twenties, straight black hair cut to the shoulder, thin wire glasses, an oversized cream knit cardigan. In a quiet office kitchen in Hangzhou in the afternoon, waiting for the kettle with a laptop under one arm, a teammate's candid phone photo. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/yusuf-demir.jpg",
+    "subject": "Yusuf Demir, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-23",
+    "prompt": "A casual smartphone photo, vertical. Turkish man, early thirties, short dark curly hair, a trimmed beard, a navy overshirt over a white t-shirt. Sitting on the steps by a ferry pier on a bright afternoon, a sketchbook on his knee, smiling at a friend's phone. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/tomasz-wrobel.jpg",
+    "subject": "Tomasz Wróbel, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Polish man, mid forties, short sandy-brown hair and stubble, safety glasses pushed up on his head, a dark grey work shirt with rolled sleeves. At a workbench in a small print workshop, measuring a printed part with calipers under a lamp, a colleague's candid phone photo. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  }
+]
