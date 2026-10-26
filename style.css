@@ -126,3 +126,20 @@ img { max-width: 100%; }
   .agent-team .at-profile img { max-width: 260px; }
 }
 /* end agent-team */
+
+/* The language button, as on our public sites: one square A/文 button that opens a dialog, never pill tabs in the footer. */
+.langs { display: inline-flex; align-items: center; }
+.lang-btn { min-width: 44px; min-height: 44px; padding: 2px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--muted); font: 700 0.85rem var(--sans); cursor: pointer; }
+.lang-btn:hover { border-color: var(--coral); color: var(--text); }
+.site-foot .lang-hint { max-width: 1120px; margin: 0 auto; padding: 0 20px 24px; color: var(--muted); font-size: 0.92rem; }
+.lang-dialog { max-width: min(420px, 90vw); padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--text); }
+.lang-dialog::backdrop { background: rgba(20, 8, 24, 0.55); }
+.lang-dialog h2 { margin: 0 0 12px; color: var(--plum); font-size: 1.1rem; }
+.lang-list { margin: 0 0 16px; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.lang-list li + li { border-top: 1px solid var(--line); }
+.lang-list a { display: block; padding: 11px 14px; color: var(--text); text-decoration: none; }
+.lang-list a:hover { background: var(--soft); }
+.lang-list a[aria-current="true"] { font-weight: 800; }
+.lang-list a[aria-current="true"]::after { content: " ✓"; color: var(--coral); }
+/* A page that exists under a locale prefix but is not translated yet: the English page, said plainly. */
+.locale-note { background: var(--warn-bg); color: var(--warn-text); border-radius: 12px; padding: 10px 14px; margin: 24px 0 0; font-size: 0.95rem; }

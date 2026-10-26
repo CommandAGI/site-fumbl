@@ -8,6 +8,11 @@
 <meta name="description" content="Fumbl is a free dating app for adults in the United States, built safety first: an ID age check, one person at a time, report and block with one tap.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="canonical" href="https://fumbl.commandagi.app/index.html">
+<link rel="alternate" hreflang="en" href="https://fumbl.commandagi.app/index.html">
+<link rel="alternate" hreflang="es" href="https://fumbl.commandagi.app/es/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fumbl.commandagi.app/zh/index.html">
+<link rel="alternate" hreflang="x-default" href="https://fumbl.commandagi.app/index.html">
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
@@ -67,6 +72,18 @@
     <span>Fumbl, a company of CommandAGI &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; hello@fumbl.commandagi.com</span>
     <span><a href="safety.html">Safety</a> &middot; <a href="app/">Demo</a> &middot; <a href="about.html">About</a> &middot; <a href="team.html">Team</a></span>
   </div>
+    <div class="wrap"><span class="langs"><button type="button" class="lang-btn" id="lang-btn" aria-haspopup="dialog" commandfor="lang-dialog" command="show-modal" aria-label="Language">A/文</button></span></div>
+  <p class="lang-hint" id="lang-hint" hidden></p>
 </footer>
+<dialog id="lang-dialog" class="lang-dialog" aria-labelledby="lang-title">
+  <h2 id="lang-title">Choose a language</h2>
+  <ul class="lang-list">
+    <li><a href="index.html" lang="en" aria-current="true">English</a></li>
+    <li><a href="es/index.html" lang="es">Español</a></li>
+    <li><a href="zh/index.html" lang="zh-Hans">简体中文</a></li>
+  </ul>
+  <button type="button" class="btn" id="lang-close" commandfor="lang-dialog" command="close">Close</button>
+</dialog>
+<script src="locale.js"></script>
 </body>
 </html>
