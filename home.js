@@ -106,5 +106,10 @@ if (!still.matches && clips.length) {
             } else v.pause();
         }
     }, { rootMargin: '200px 0px' });
-    clips.forEach(v => play.observe(v));
+    // The hero's clip waits for the visitor's first scroll, tap or key: its first frame would otherwise replace the
+    // still as the largest paint, late, on a slow link.
+    const [hero, ...rest] = clips;
+    rest.forEach(v => play.observe(v));
+    const wake = () => { play.observe(hero); for (const e of ['scroll', 'pointerdown', 'keydown']) removeEventListener(e, wake); };
+    for (const e of ['scroll', 'pointerdown', 'keydown']) addEventListener(e, wake, { once: true, passive: true });
 }

@@ -44,14 +44,21 @@ and dark, English, Spanish and Chinese. What the screenshots showed, and what ch
 8. The Chinese headline's lines touched: CJK headings get no negative tracking and 1.08 line height.
 9. The demo's main panel wore the focus halo after its script focused it: removed there only.
 
-## measured (local, Chromium, Lighthouse's mobile throttling: 1.6 Mbps, 150 ms RTT, CPU ×4)
+## measured (Chromium, Lighthouse's mobile throttling: 1.6 Mbps, 150 ms RTT, CPU ×4, cache off)
 
-| page | width | LCP | CLS | JS |
-|---|---|---|---|---|
-| `/index.html` | 390 | 1.80 s | 0.003 | 9.1 KB |
-| `/index.html` | 1440 | 0.98 s | 0.052 | 9.1 KB |
-| `/zh/index.html` | 390 | 1.12 s | 0 | 9.1 KB |
-| `/zh/index.html` | 1440 | 1.80 s | 0 | 9.1 KB |
+| where | page | width | LCP | CLS | JS (transferred) |
+|---|---|---|---|---|---|
+| local | `/index.html` | 390 / 1440 | 1.39 / 1.46 s | 0.003 / 0.020 | 9.6 KB |
+| local | `/zh/index.html` | 390 / 1440 | 1.12 / 1.80 s | 0 / 0 | 9.1 KB |
+| live, 3 runs | `/index.html` | 390 | 1.09, 2.76, 1.10 s | 0–0.003 | 4.6 KB |
+| live, 3 runs | `/index.html` | 1440 | 1.05, 1.60, 1.06 s | 0.020–0.031 | 4.6 KB |
+| live | `/es/index.html` | 390 / 1440 | 1.15 / 0.95 s | 0.005 / 0.006 | 4.6 KB |
+
+The LCP element is the hero's still (`media/dusk.avif`, 10.6 KB, preloaded). One live run of eight took 2.76 s, with
+fewer bytes fetched than the others: a cold edge, not the page. Before the hero clip waited for the first scroll, its
+first frame became the largest paint on a slow link (2.8 s); it now starts on the first scroll, tap or key. The site
+host injects Cloudflare's analytics beacon, which the page's own policy (`script-src 'self'`) blocks: the one console
+error, not the site's.
 
 CLS was 0.086 before the display fallback was metric-matched (Arial at size-adjust 85%, measured against Bricolage's
 headline width). No horizontal scroll at any width. Keyboard: the consent buttons (Enter, Space), the plan fields and
@@ -65,7 +72,7 @@ Contrast pairs in DESIGN.md (lowest 5.2 : 1).
 | 8 | 9 | 8 | 8 | 8 | 7 | 8.0 |
 
 Craft stays at 7: the phone's screens leave empty space under short content, and the hero's arch is a still until the
-clip arrives.
+first scroll.
 
 ## distinct from the set (checked live, 2026-10-26)
 

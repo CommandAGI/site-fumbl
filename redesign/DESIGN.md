@@ -57,6 +57,7 @@ Every corner is a speech bubble with one tail: `--bubble-you` (tail bottom right
 |---|---|---|
 | the headline fumbles and settles | CSS keyframes, once | still |
 | the sun sets behind the night section's edge | `animation-timeline: view()` | a still half sun |
+| the café clip starts at the first scroll, tap or key (the still is the hero until then) | `home.js` | never loaded |
 | the clock and the bar turning to night | IntersectionObserver | the same (not motion) |
 | the phone's screen follows the steps | IntersectionObserver, crossfade and rise | instant swap |
 | the consent moon closes on two yeses | transition, a spring, a glow | instant |
