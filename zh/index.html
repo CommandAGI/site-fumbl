@@ -6,6 +6,13 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Fumbl：为成年人而做的交友 App，安全第一</title>
 <meta name="description" content="Fumbl 是一款面向美国成年人的免费交友 App，安全第一：证件年龄核验、一次只看到一个人、一键举报和拉黑。">
+<meta name="theme-color" content="#fff2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d0f1b" media="(prefers-color-scheme: dark)">
+<meta property="og:image" content="https://fumbl.commandagi.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../media/dusk.avif" as="image" type="image/avif">
+<link rel="apple-touch-icon" href="../touch-icon.png">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://fumbl.commandagi.app/zh/index.html">
@@ -14,11 +21,12 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://fumbl.commandagi.app/zh/index.html">
 <link rel="alternate" hreflang="x-default" href="https://fumbl.commandagi.app/index.html">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">跳到正文</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="../mark.svg" alt="" width="34" height="34">fumbl</a>
+    <p class="clock" aria-hidden="true"><span class="orb"></span><span id="clock">18:40</span></p>
     <nav class="site-nav" aria-label="网站">
       <a href="index.html" aria-current="page">首页</a>
       <a href="safety.html">安全</a>
@@ -30,40 +38,139 @@
   </div>
 </header>
 
-<main id="main" class="wrap">
-  <section class="hero">
-    <div>
-      <h1>手忙脚乱没关系，感到不安全不行。</h1>
-      <p>Fumbl 是给成年人的交友 App。你一次只看到一个人，双方都说“好”之后才能聊天，而且随时可以在任何页面一键离开、拉黑或举报。</p>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title" data-time="18:40">
+    <div class="hero-words">
+      <h1 id="hero-title"><span class="fumble" aria-hidden="true"><span>手忙</span><span class="squish">脚乱</span> <span>没关系。</span></span><span class="sr">手忙脚乱没关系。</span> <span class="unsafe">感到不安全不行。</span></h1>
+      <p class="lede">给成年人的交友 App。一次只看一个人。双方都说“好”之后才能聊天。</p>
       <div class="btns">
         <a class="btn primary" href="../app/live.html">加入 Fumbl</a>
         <a class="btn" href="../app/">先试试演示</a>
       </div>
-      <p class="notice"><strong>免费，面向美国成年人。</strong>你用 CommandAGI 账号登录，我们在任何人看到你之前，用证件和自拍核验你的年龄。演示用的是虚构的示例资料，只在你自己的浏览器里运行。</p>
-      <p class="notice"><strong>FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong><br>FUMBL 不进行犯罪背景调查，也不对会员进行身份审查。在见任何人之前，请先读我们的<a href="safety.html">安全提示</a>。</p>
+      <ul class="facts" aria-label="要点">
+        <li>免费</li><li>18+</li><li>美国</li><li><span class="ok">证件核验年龄</span></li>
+      </ul>
     </div>
-    <div class="hero-art"><img src="../hero.svg" alt="插画：两个人在打招呼，中间有一面盾牌" width="380" height="300"></div>
+    <figure class="arch">
+      <picture>
+        <source srcset="../media/dusk.avif" type="image/avif">
+        <img src="../media/dusk.jpg" alt="" width="960" height="1200" fetchpriority="high">
+      </picture>
+      <video class="loop" muted loop playsinline preload="none" data-src="../media/dusk" aria-hidden="true"></video>
+      <figcaption>生成的图片，不是真实地点。</figcaption>
+    </figure>
   </section>
 
-  <section class="section" aria-labelledby="promises">
-    <h2 id="promises">我们的承诺</h2>
-    <div class="cards">
-      <div class="card"><h3>只限成年人</h3><p>Fumbl 面向 18 岁及以上的人。我们请你填写出生日期，而不是勾一个方框，并用证件和自拍核验年龄。我们只保留结果。</p></div>
-      <div class="card"><h3>没有你的同意，什么都不共享</h3><p>双方互相喜欢之前不会有任何消息。目前没有照片，也绝不会共享你的位置或联系人。</p></div>
-      <div class="card"><h3>拉黑和举报，一键完成</h3><p>在每个资料页和每个聊天里都有。拉黑立即生效，对方不会被告知。每条举报都会有一个决定和一个理由。</p></div>
-      <div class="card"><h3>你的消息属于你</h3><p>聊天只有你们两个人能读。我们绝不售卖你的数据，也绝不把消息用于广告。</p></div>
-      <div class="card"><h3>不玩套路</h3><p>“喜欢”和“跳过”两个按钮一样大。没有倒计时、没有假活跃、没有模糊的诱饵逼你付费。</p></div>
-      <div class="card"><h3>代理人在经营公司，不参与你的约会</h3><p>我们的团队是 AI 代理人，并且会说明这一点。他们绝不冒充会员，也绝不作为一个人给你写信。</p></div>
+  <section class="night" aria-labelledby="night-title">
+    <header class="night-head">
+      <p class="kicker">一个晚上，五次轻点</p>
+      <h2 id="night-title">安全不是一个设置页面，而是整场约会。</h2>
+    </header>
+    <div class="story">
+      <div class="phone" aria-hidden="true">
+        <div class="screen" data-screen="verified">
+          <p class="bar"><span class="ok-dot"></span>示例资料</p>
+          <div class="who"><span class="initial">S</span><b>Sam, 31</b><span class="tag-ok">已核验成年</span></div>
+          <p class="prompt"><small>完美的第一次约会</small>先吃塔可，再找个热闹点的地方散很久的步。</p>
+          <div class="decide"><span>跳过</span><span>喜欢</span></div>
+        </div>
+        <div class="screen" data-screen="consent">
+          <p class="bar">来不来电</p>
+          <div class="moon mini"><i class="half you"></i><i class="half them"></i></div>
+          <p class="big">双方都说了“好”。</p>
+          <p class="small">聊天现在才打开，早一刻都不会。</p>
+        </div>
+        <div class="screen" data-screen="plan">
+          <p class="bar">发给：一位朋友</p>
+          <p class="bubble me">19:30 和 Sam 在第五街的塔可店见面。21:40 给我发个消息好吗？如果 23:30 前没收到“我到家了”，就给我打电话。</p>
+          <p class="bubble them">好！！玩得开心</p>
+          <p class="type">消息</p>
+        </div>
+        <div class="screen" data-screen="report">
+          <p class="bar">示例聊天</p>
+          <p class="bubble them">我在车站刷卡被拒了，能先转我 200 美元吗？今晚就还你</p>
+          <p class="caution"><b>请小心。</b>这条消息在要钱。永远不要给没见过面的人转钱。</p>
+          <div class="decide"><span>举报</span><span>拉黑</span></div>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li data-step="verified" data-time="18:40">
+          <p class="time">18:40</p>
+          <h3>已核验的成年人。</h3>
+          <p>在任何人看到你之前，用证件和自拍核验一次。我们只保留结果，不保留证件。</p>
+        </li>
+        <li data-step="consent" data-time="19:05">
+          <p class="time">19:05</p>
+          <h3>来不来电，要两个人说了算。</h3>
+          <p>双方互相喜欢之前，不会有任何消息。试试看：一个“好”不够。</p>
+          <div class="consent" role="group" aria-labelledby="consent-label">
+            <p id="consent-label" class="sr">双方同意：两边都由你来点</p>
+            <div class="moon" aria-hidden="true"><i class="half you"></i><i class="half them"></i></div>
+            <div class="sides">
+              <button type="button" class="side you" aria-pressed="false" data-side="you">你：好</button>
+              <button type="button" class="side them" aria-pressed="false" data-side="them">Sam：好</button>
+            </div>
+            <p class="consent-state" aria-live="polite" data-none="还没有人说“好”。什么都不会发生。" data-one="只有一个“好”。什么都不会发出，也不会通知任何人。" data-both="双方都说了“好”。现在可以聊天了。">还没有人说“好”。什么都不会发生。</p>
+            <p class="label">示意。Sam 是示例人物，两边都由你来点。</p>
+          </div>
+        </li>
+        <li data-step="plan" data-time="19:30">
+          <p class="time">19:30</p>
+          <h3>把计划告诉一位朋友。</h3>
+          <p>在哪里、和谁、几点到家。在这里写好，再用你的手机发出去。Fumbl 什么都不发送。</p>
+          <form class="plan" id="plan" novalidate>
+            <label>地点<input name="where" autocomplete="off" value="第五街的塔可店"></label>
+            <label>和谁<input name="who" autocomplete="off" value="Sam"></label>
+            <label>几点前到家<input name="by" type="time" value="23:30"></label>
+            <output name="text" for="where who by" aria-live="polite"></output>
+            <div class="plan-btns">
+              <button type="button" class="btn" id="plan-share">分享</button>
+              <button type="button" class="btn" id="plan-copy">复制</button>
+            </div>
+            <p class="label" id="plan-said" aria-live="polite" data-noshare="这个浏览器不能分享，请复制。" data-shared="已从你的手机分享。Fumbl 没有发送任何东西。" data-copied="已复制，粘贴给朋友吧。" data-nocopy="这里无法复制。请选中文字后复制。"></p>
+          </form>
+        </li>
+        <li data-step="report" data-time="21:40">
+          <p class="time">21:40</p>
+          <h3>举报和拉黑：任何地方，一键完成。</h3>
+          <p>在每个资料页和每个聊天里都有。拉黑立即生效，对方不会被告知；每条举报都会有一个决定和一个理由。新配对的人向你要钱时，App 会提醒你。</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="how">
-    <h2 id="how">怎么用</h2>
-    <ol class="steps">
-      <li><strong>登录，核验年龄。</strong>然后填一个名字、你想认识谁、你在找什么。</li>
-      <li><strong>一次认识一个人。</strong>喜欢或跳过。当你看完了所有人，我们会告诉你。</li>
-      <li><strong>双方都说“好”之后就可以聊天。</strong>想走的时候，一键就能走。</li>
-    </ol>
+  <section class="plate window" aria-labelledby="games-title" data-time="22:15">
+    <div class="plate-media" aria-hidden="true"><video class="loop" muted loop playsinline preload="none" data-src="../media/window"></video></div>
+    <div class="plate-words">
+      <h2 id="games-title"><span>喜欢</span><span class="vs">和</span><span>跳过</span>一样大。</h2>
+      <p>没有倒计时，没有假活跃，没有模糊的诱饵逼你付费。</p>
+    </div>
+    <p class="credit">生成的视频，不是真实的街道。</p>
+  </section>
+
+  <section class="promises" aria-labelledby="promises-title" data-time="22:50">
+    <h2 id="promises-title" class="kicker">小字条款，用大字写</h2>
+    <ul>
+      <li><b>18+。</b> <span>填出生日期，而不是勾一个方框。</span></li>
+      <li><b>没有照片。</b> <span>暂时没有，谁的都没有。资料只有文字和一幅插画。</span></li>
+      <li><b>绝不要你的位置。</b> <span>也不要你的联系人。</span></li>
+      <li><b>聊天属于你。</b> <span>只有你们两个人能读。我们绝不售卖你的数据，也绝不用于广告。</span></li>
+      <li><b>代理人在经营公司。</b> <span>我们的团队是 AI 代理人，并且会说明这一点。他们绝不冒充会员，也绝不作为一个人给你写信。</span></li>
+    </ul>
+  </section>
+
+  <section class="plate home-plate" aria-labelledby="home-title" data-time="23:52">
+    <div class="plate-media" aria-hidden="true"><video class="loop" muted loop playsinline preload="none" data-src="../media/home"></video></div>
+    <div class="plate-words">
+      <h2 id="home-title">我到家了。</h2>
+      <div class="btns">
+        <a class="btn primary" href="../app/live.html">加入 Fumbl</a>
+        <a class="btn" href="../app/">先试试演示</a>
+      </div>
+      <p class="legal"><strong class="no-checks">FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong> FUMBL 不进行犯罪背景调查，也不对会员进行身份审查。在见任何人之前，请先读我们的<a href="safety.html">安全提示</a>。你用 CommandAGI 账号登录；演示用的是虚构的示例资料，只在你自己的浏览器里运行。</p>
+    </div>
+    <p class="credit">生成的视频，不是真实的家。</p>
   </section>
 </main>
 
@@ -85,5 +192,6 @@
   <button type="button" class="btn" id="lang-close" commandfor="lang-dialog" command="close">关闭</button>
 </dialog>
 <script src="../locale.js"></script>
+<script src="../home.js" type="module"></script>
 </body>
 </html>

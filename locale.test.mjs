@@ -127,3 +127,21 @@ test('a country code or a generic TLD maps to a locale that ships', () => {
     }
     for (const tld of all.domains.genericTlds) assert.ok(!(tld in all.domains.byCountryCode), `.${tld} is both a country code and a generic TLD`);
 });
+
+test('every home page plays generated clips muted, in AV1 and H.264, labeled generated, over a still', () => {
+    for (const locale of all.locales) {
+        const file = `${locale.prefix}index.html`;
+        const html = read(file);
+        const clips = [...html.matchAll(/<video ([^>]*)>/g)].map(m => m[1]);
+        assert.equal(clips.length, 3, `${file} does not carry the three clips`);
+        for (const attrs of clips) {
+            assert.match(attrs, /\bmuted\b/, `${file} has a clip with sound`);
+            assert.ok(!/\bautoplay\b/.test(attrs), `${file} autoplays a clip: home.js plays them only on screen and never under reduced motion`);
+            const src = /data-src="([^"]*)"/.exec(attrs)?.[1];
+            for (const ext of ['webm', 'mp4', 'jpg', 'avif'])
+                assert.ok(existsSync(path.join(here, path.dirname(file), `${src}.${ext}`)), `${file}: ${src}.${ext} is missing`);
+        }
+        assert.equal((html.match(/<p class="credit">|<figcaption>/g) ?? []).length, 3, `${file} does not say each picture is generated`);
+        assert.match(html, /<script src="(?:\.\.\/)?home\.js" type="module"><\/script>/, `${file} does not load home.js`);
+    }
+});

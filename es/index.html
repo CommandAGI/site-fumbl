@@ -6,6 +6,13 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Fumbl: citas para adultos, la seguridad primero</title>
 <meta name="description" content="Fumbl es una app de citas gratuita para adultos en Estados Unidos, hecha con la seguridad primero: comprobación de edad con una identificación, una persona a la vez, denunciar y bloquear con un toque.">
+<meta name="theme-color" content="#fff2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d0f1b" media="(prefers-color-scheme: dark)">
+<meta property="og:image" content="https://fumbl.commandagi.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../media/dusk.avif" as="image" type="image/avif">
+<link rel="apple-touch-icon" href="../touch-icon.png">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://fumbl.commandagi.app/es/index.html">
@@ -14,11 +21,12 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://fumbl.commandagi.app/zh/index.html">
 <link rel="alternate" hreflang="x-default" href="https://fumbl.commandagi.app/index.html">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Ir al contenido</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="../mark.svg" alt="" width="34" height="34">fumbl</a>
+    <p class="clock" aria-hidden="true"><span class="orb"></span><span id="clock">18:40</span></p>
     <nav class="site-nav" aria-label="Sitio">
       <a href="index.html" aria-current="page">Inicio</a>
       <a href="safety.html">Seguridad</a>
@@ -30,40 +38,139 @@
   </div>
 </header>
 
-<main id="main" class="wrap">
-  <section class="hero">
-    <div>
-      <h1>Está bien meter la pata. No está bien sentirse en peligro.</h1>
-      <p>Fumbl es una app de citas para adultos. Ves a una persona a la vez, hablas solo cuando los dos habéis dicho que sí, y puedes irte, bloquear o denunciar con un toque desde cualquier lugar.</p>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title" data-time="18:40">
+    <div class="hero-words">
+      <h1 id="hero-title"><span class="fumble" aria-hidden="true"><span>Está</span> <span>bien</span> <span>meter</span> <span class="squish">la pata.</span></span><span class="sr">Está bien meter la pata.</span> <span class="unsafe">No está bien sentirse en peligro.</span></h1>
+      <p class="lede">Una app de citas para adultos. Una persona a la vez. Habláis solo cuando los dos habéis dicho que sí.</p>
       <div class="btns">
         <a class="btn primary" href="../app/live.html">Únete a Fumbl</a>
         <a class="btn" href="../app/">Probar primero la demo</a>
       </div>
-      <p class="notice"><strong>Gratis, para adultos en Estados Unidos.</strong> Entras con una cuenta de CommandAGI y comprobamos tu edad con una identificación y una selfie antes de que nadie te vea. La demo funciona con perfiles de ejemplo ficticios, solo en tu navegador.</p>
-      <p class="notice"><strong>FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong><br>Fumbl no realiza comprobaciones de antecedentes penales ni identifica a sus miembros. Lee nuestros <a href="safety.html">consejos de seguridad</a> antes de conocer a alguien.</p>
+      <ul class="facts" aria-label="Lo esencial">
+        <li>Gratis</li><li>18+</li><li>Estados Unidos</li><li><span class="ok">Edad comprobada con identificación</span></li>
+      </ul>
     </div>
-    <div class="hero-art"><img src="../hero.svg" alt="Una ilustración: dos personas se saludan con un escudo entre ellas" width="380" height="300"></div>
+    <figure class="arch">
+      <picture>
+        <source srcset="../media/dusk.avif" type="image/avif">
+        <img src="../media/dusk.jpg" alt="" width="960" height="1200" fetchpriority="high">
+      </picture>
+      <video class="loop" muted loop playsinline preload="none" data-src="../media/dusk" aria-hidden="true"></video>
+      <figcaption>Imagen generada, no un lugar real.</figcaption>
+    </figure>
   </section>
 
-  <section class="section" aria-labelledby="promises">
-    <h2 id="promises">Lo que prometemos</h2>
-    <div class="cards">
-      <div class="card"><h3>Solo adultos</h3><p>Fumbl es para personas de 18 años o más. Pedimos una fecha de nacimiento, no una casilla, y comprobamos la edad con una identificación y una selfie. Solo guardamos el resultado.</p></div>
-      <div class="card"><h3>Nada se comparte sin tu permiso</h3><p>Ningún mensaje antes de que los dos os gustéis. Ninguna foto por ahora, y nunca tu ubicación ni tus contactos.</p></div>
-      <div class="card"><h3>Denunciar y bloquear, con un toque</h3><p>En cada perfil y en cada chat. El bloqueo es instantáneo y silencioso. Cada denuncia recibe una decisión y un motivo.</p></div>
-      <div class="card"><h3>Tus mensajes son tuyos</h3><p>Solo los dos leéis un chat. Nunca vendemos tus datos ni usamos tus mensajes para publicidad.</p></div>
-      <div class="card"><h3>Sin juegos</h3><p>El botón de me gusta y el de pasar tienen el mismo tamaño. Sin cuentas atrás, sin actividad falsa, sin señuelos borrosos para que pagues.</p></div>
-      <div class="card"><h3>Los agentes llevan la empresa, no tus citas</h3><p>Nuestro equipo son agentes de IA, y lo dicen. Nunca se hacen pasar por miembros ni te escriben como una persona.</p></div>
+  <section class="night" aria-labelledby="night-title">
+    <header class="night-head">
+      <p class="kicker">Una noche, cinco toques</p>
+      <h2 id="night-title">La seguridad no es una página de ajustes. Es toda la cita.</h2>
+    </header>
+    <div class="story">
+      <div class="phone" aria-hidden="true">
+        <div class="screen" data-screen="verified">
+          <p class="bar"><span class="ok-dot"></span>Perfil de ejemplo</p>
+          <div class="who"><span class="initial">S</span><b>Sam, 31</b><span class="tag-ok">Adulto verificado</span></div>
+          <p class="prompt"><small>Una primera cita perfecta</small>Tacos y luego un paseo largo por un sitio con ruido suficiente para estar a gusto.</p>
+          <div class="decide"><span>Pasar</span><span>Me gusta</span></div>
+        </div>
+        <div class="screen" data-screen="consent">
+          <p class="bar">¿Hay química?</p>
+          <div class="moon mini"><i class="half you"></i><i class="half them"></i></div>
+          <p class="big">Los dos dijisteis que sí.</p>
+          <p class="small">El chat se abre ahora. Ni un momento antes.</p>
+        </div>
+        <div class="screen" data-screen="plan">
+          <p class="bar">Para: una amiga</p>
+          <p class="bubble me">Quedé con Sam en la taquería de la Quinta, a las 19:30. ¿Me escribes a las 21:40? Si a las 23:30 no te digo «ya estoy en casa», llámame.</p>
+          <p class="bubble them">¡vale! pásalo bien</p>
+          <p class="type">Mensaje</p>
+        </div>
+        <div class="screen" data-screen="report">
+          <p class="bar">Chat de ejemplo</p>
+          <p class="bubble them">me rechazaron la tarjeta en la estación, ¿me mandas 200 $? te los devuelvo esta noche</p>
+          <p class="caution"><b>Cuidado.</b> Este mensaje pide dinero. Nunca envíes dinero a alguien que no conoces en persona.</p>
+          <div class="decide"><span>Denunciar</span><span>Bloquear</span></div>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li data-step="verified" data-time="18:40">
+          <p class="time">18:40</p>
+          <h3>Adulto verificado.</h3>
+          <p>Una identificación y una selfie, una vez, antes de que nadie te vea. Guardamos el resultado, no la identificación.</p>
+        </li>
+        <li data-step="consent" data-time="19:05">
+          <p class="time">19:05</p>
+          <h3>Para que haya química hacen falta dos.</h3>
+          <p>Ningún mensaje antes de que los dos os gustéis. Pruébalo: un solo sí no basta.</p>
+          <div class="consent" role="group" aria-labelledby="consent-label">
+            <p id="consent-label" class="sr">Consentimiento mutuo: tú haces de las dos personas</p>
+            <div class="moon" aria-hidden="true"><i class="half you"></i><i class="half them"></i></div>
+            <div class="sides">
+              <button type="button" class="side you" aria-pressed="false" data-side="you">Tú: sí</button>
+              <button type="button" class="side them" aria-pressed="false" data-side="them">Sam: sí</button>
+            </div>
+            <p class="consent-state" aria-live="polite" data-none="Nadie ha dicho que sí. No pasa nada." data-one="Un sí. No se envía nada y nadie se entera." data-both="Los dos dijisteis que sí. Ya podéis hablar.">Nadie ha dicho que sí. No pasa nada.</p>
+            <p class="label">Ilustrativo. Sam es un ejemplo y tú haces de los dos.</p>
+          </div>
+        </li>
+        <li data-step="plan" data-time="19:30">
+          <p class="time">19:30</p>
+          <h3>Cuéntale el plan a alguien de confianza.</h3>
+          <p>Dónde, con quién y a qué hora estarás en casa. Escríbelo aquí y envíalo desde tu móvil. Fumbl no envía nada.</p>
+          <form class="plan" id="plan" novalidate>
+            <label>Dónde<input name="where" autocomplete="off" value="la taquería de la Quinta"></label>
+            <label>Con quién<input name="who" autocomplete="off" value="Sam"></label>
+            <label>En casa a las<input name="by" type="time" value="23:30"></label>
+            <output name="text" for="where who by" aria-live="polite"></output>
+            <div class="plan-btns">
+              <button type="button" class="btn" id="plan-share">Compartir</button>
+              <button type="button" class="btn" id="plan-copy">Copiar</button>
+            </div>
+            <p class="label" id="plan-said" aria-live="polite" data-noshare="Este navegador no puede compartir. Cópialo." data-shared="Compartido desde tu móvil. Fumbl no envió nada." data-copied="Copiado. Pégaselo a alguien." data-nocopy="No se pudo copiar aquí. Selecciona el texto y cópialo."></p>
+          </form>
+        </li>
+        <li data-step="report" data-time="21:40">
+          <p class="time">21:40</p>
+          <h3>Denunciar y bloquear: un toque, en cualquier sitio.</h3>
+          <p>En cada perfil y en cada chat. El bloqueo es instantáneo y silencioso, y cada denuncia recibe una decisión y un motivo. La app te avisa cuando un match nuevo pide dinero.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="how">
-    <h2 id="how">Cómo funciona</h2>
-    <ol class="steps">
-      <li><strong>Entra y comprueba tu edad.</strong> Después, un nombre, a quién quieres conocer y qué buscas.</li>
-      <li><strong>Conoce a una persona a la vez.</strong> Me gusta o pasar. Cuando hayas visto a todo el mundo, te lo decimos.</li>
-      <li><strong>Habla cuando los dos habéis dicho que sí.</strong> Y vete cuando quieras, con un toque.</li>
-    </ol>
+  <section class="plate window" aria-labelledby="games-title" data-time="22:15">
+    <div class="plate-media" aria-hidden="true"><video class="loop" muted loop playsinline preload="none" data-src="../media/window"></video></div>
+    <div class="plate-words">
+      <h2 id="games-title"><span>Me gusta</span> <span class="vs">y</span> <span>pasar</span> miden lo mismo.</h2>
+      <p>Sin cuentas atrás. Sin actividad falsa. Sin señuelos borrosos para que pagues.</p>
+    </div>
+    <p class="credit">Vídeo generado, no una calle real.</p>
+  </section>
+
+  <section class="promises" aria-labelledby="promises-title" data-time="22:50">
+    <h2 id="promises-title" class="kicker">La letra pequeña, en letra grande</h2>
+    <ul>
+      <li><b>18+.</b> <span>Una fecha de nacimiento, no una casilla.</span></li>
+      <li><b>Sin fotos.</b> <span>Todavía no, de nadie. Los perfiles son palabras y un dibujo.</span></li>
+      <li><b>Nunca tu ubicación.</b> <span>Ni tus contactos.</span></li>
+      <li><b>Tu chat es tuyo.</b> <span>Solo lo leéis los dos. Nunca vendemos tus datos ni los usamos para publicidad.</span></li>
+      <li><b>Los agentes llevan la empresa.</b> <span>Nuestro equipo son agentes de IA, y lo dicen. Nunca se hacen pasar por miembros ni te escriben como una persona.</span></li>
+    </ul>
+  </section>
+
+  <section class="plate home-plate" aria-labelledby="home-title" data-time="23:52">
+    <div class="plate-media" aria-hidden="true"><video class="loop" muted loop playsinline preload="none" data-src="../media/home"></video></div>
+    <div class="plate-words">
+      <h2 id="home-title">Ya estoy en casa.</h2>
+      <div class="btns">
+        <a class="btn primary" href="../app/live.html">Únete a Fumbl</a>
+        <a class="btn" href="../app/">Probar primero la demo</a>
+      </div>
+      <p class="legal"><strong class="no-checks">FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong> Fumbl no realiza comprobaciones de antecedentes penales ni identifica a sus miembros. Lee nuestros <a href="safety.html">consejos de seguridad</a> antes de conocer a alguien. Entras con una cuenta de CommandAGI; la demo funciona con perfiles de ejemplo ficticios, solo en tu navegador.</p>
+    </div>
+    <p class="credit">Vídeo generado, no una casa real.</p>
   </section>
 </main>
 
@@ -85,5 +192,6 @@
   <button type="button" class="btn" id="lang-close" commandfor="lang-dialog" command="close">Cerrar</button>
 </dialog>
 <script src="../locale.js"></script>
+<script src="../home.js" type="module"></script>
 </body>
 </html>

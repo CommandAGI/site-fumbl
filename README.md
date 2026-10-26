@@ -4,7 +4,11 @@ The site of Fumbl, a dating app for adults built safety first, a company of Comm
 served by CommandAGI's site hosting; mounted in the CommandAGI repository at
 `seed/drive/platform/org-fumbl/sites/fumbl`. Live at <https://fumbl.commandagi.app>.
 
-- `index.html`, `safety.html`, `about.html`: the site. The safety notice, tips and rules are the charter's
+- `index.html`, `safety.html`, `about.html`: the site. The home page is one evening, 6:40 pm to 11:52 pm (`home.js`:
+  the clock, the phone, the two-sided yes, the plan helper, clips that play only on screen); the design is
+  `redesign/DESIGN.md`, the audit `redesign/CONTENT.md`, the generated media and the measurements `redesign/NOTES.md`.
+  `style.css` holds every page's type and colour; `fonts/` the self-hosted Latin subsets (OFL); `media/` the clips and
+  their stills. The safety notice, tips and rules are the charter's
   (`companies/fumbl/charter.md` in CommandAGI's Drive).
 - `app/`: the demo. Fictional sample profiles drawn as illustrations, each marked "Sample profile"; the state is in the
   browser's session storage and the page sends nothing (`connect-src 'none'`).
@@ -41,7 +45,10 @@ domain yet; `fumbl.commandagi.app` is the primary, in English).
 ```
 node make-locales.mjs           regenerate the pages a locale does not translate
 node make-locales.mjs --check   fail when one of them is stale
-node --test locale.test.mjs     the site's own test: every page in every locale, the picker, the links, no outside request
+node --test locale.test.mjs     the site's own test: every page in every locale, the picker, the links, no outside request,
+                                the home pages' clips (muted, AV1 and H.264, a still, labeled generated)
+COMMANDAGI_ENV_ROOT=<checkout> node redesign/fal.mjs stills|videos   remake the generated media (costs money: NOTES.md)
+python3 redesign/render-og.py   render og.png and touch-icon.png
 ```
 
 ## deploy

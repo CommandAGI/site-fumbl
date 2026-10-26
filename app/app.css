@@ -76,3 +76,4 @@ dialog h2 { margin: 0 0 6px; color: var(--plum); font-size: 1.3rem; }
 .check:has(span) { align-items: flex-start; }
 .check > input { flex: none; margin-top: 4px; }
 .check > span { flex: 1; min-width: 0; }
+.app-main:focus, .app-main:focus-visible { outline: none; box-shadow: none; }

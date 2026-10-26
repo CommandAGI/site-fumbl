@@ -6,19 +6,30 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Fumbl: dating for adults, safety first</title>
 <meta name="description" content="Fumbl is a free dating app for adults in the United States, built safety first: an ID age check, one person at a time, report and block with one tap.">
+<meta name="theme-color" content="#fff2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d0f1b" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Fumbl: it's fine to fumble">
+<meta property="og:description" content="A free dating app for adults in the United States, built safety first.">
+<meta property="og:image" content="https://fumbl.commandagi.app/og.png">
+<meta property="og:url" content="https://fumbl.commandagi.app/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/dusk.avif" as="image" type="image/avif">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="touch-icon.png">
 <link rel="canonical" href="https://fumbl.commandagi.app/index.html">
 <link rel="alternate" hreflang="en" href="https://fumbl.commandagi.app/index.html">
 <link rel="alternate" hreflang="es" href="https://fumbl.commandagi.app/es/index.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://fumbl.commandagi.app/zh/index.html">
 <link rel="alternate" hreflang="x-default" href="https://fumbl.commandagi.app/index.html">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to the content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="mark.svg" alt="" width="34" height="34">fumbl</a>
+    <p class="clock" aria-hidden="true"><span class="orb"></span><span id="clock">6:40 pm</span></p>
     <nav class="site-nav" aria-label="Site">
       <a href="index.html" aria-current="page">Home</a>
       <a href="safety.html">Safety</a>
@@ -30,40 +41,139 @@
   </div>
 </header>
 
-<main id="main" class="wrap">
-  <section class="hero">
-    <div>
-      <h1>It's fine to fumble. It's not fine to feel unsafe.</h1>
-      <p>Fumbl is a dating app for adults. You see one person at a time, you talk only when you both said yes, and you can leave, block or report with one tap from anywhere.</p>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title" data-time="6:40 pm">
+    <div class="hero-words">
+      <h1 id="hero-title"><span class="fumble" aria-hidden="true"><span>It’s</span> <span>fine</span> <span>to</span> <span class="squish">fumble.</span></span><span class="sr">It’s fine to fumble.</span> <span class="unsafe">It’s not fine to feel unsafe.</span></h1>
+      <p class="lede">A dating app for adults. One person at a time. You talk only when you both said yes.</p>
       <div class="btns">
         <a class="btn primary" href="app/live.html">Join Fumbl</a>
         <a class="btn" href="app/">Try the demo first</a>
       </div>
-      <p class="notice"><strong>Free, for adults in the United States.</strong> You sign in with a CommandAGI account, and we check your age with an ID and a selfie before anyone sees you. The demo runs on fictional sample profiles, in your browser only.</p>
-      <p class="notice"><strong>FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong> Read our <a href="safety.html">safety tips</a> before you meet anyone.</p>
+      <ul class="facts" aria-label="The facts">
+        <li>Free</li><li>18+</li><li>United States</li><li><span class="ok">ID age check</span></li>
+      </ul>
     </div>
-    <div class="hero-art"><img src="hero.svg" alt="An illustration: two people say hello, with a shield between them" width="380" height="300"></div>
+    <figure class="arch">
+      <picture>
+        <source srcset="media/dusk.avif" type="image/avif">
+        <img src="media/dusk.jpg" alt="" width="960" height="1200" fetchpriority="high">
+      </picture>
+      <video class="loop" muted loop playsinline preload="none" data-src="media/dusk" aria-hidden="true"></video>
+      <figcaption>Generated still, not a real place.</figcaption>
+    </figure>
   </section>
 
-  <section class="section" aria-labelledby="promises">
-    <h2 id="promises">What we promise</h2>
-    <div class="cards">
-      <div class="card"><h3>Adults only</h3><p>Fumbl is for people aged 18 and over. We ask for a date of birth, not a tick box, and check age with an ID and a selfie. We keep only the result.</p></div>
-      <div class="card"><h3>Nothing shared without your say</h3><p>No message before you both like each other. No photos at all for now, and never your location or contacts.</p></div>
-      <div class="card"><h3>Report and block, one tap</h3><p>On every profile and in every chat. A block is instant and silent. Every report gets a decision and a reason.</p></div>
-      <div class="card"><h3>Your messages are yours</h3><p>Only the two of you read a chat. We never sell your data or use your messages for ads.</p></div>
-      <div class="card"><h3>No games</h3><p>Like and pass are the same size. No countdowns, no fake activity, no blurred teasers to make you pay.</p></div>
-      <div class="card"><h3>Agents run the company, not your dates</h3><p>Our team are AI agents, and they say so. They never pose as members or write to you as a person.</p></div>
+  <section class="night" aria-labelledby="night-title">
+    <header class="night-head">
+      <p class="kicker">One evening, five taps</p>
+      <h2 id="night-title">Safety isn’t a settings page. It’s the whole date.</h2>
+    </header>
+    <div class="story">
+      <div class="phone" aria-hidden="true">
+        <div class="screen" data-screen="verified">
+          <p class="bar"><span class="ok-dot"></span>Sample profile</p>
+          <div class="who"><span class="initial">S</span><b>Sam, 31</b><span class="tag-ok">Verified adult</span></div>
+          <p class="prompt"><small>A perfect first date</small>Tacos, then a long walk somewhere loud enough to be easy.</p>
+          <div class="decide"><span>Pass</span><span>Like</span></div>
+        </div>
+        <div class="screen" data-screen="consent">
+          <p class="bar">Vibe check</p>
+          <div class="moon mini"><i class="half you"></i><i class="half them"></i></div>
+          <p class="big">Both said yes.</p>
+          <p class="small">The chat opens now. Not a moment before.</p>
+        </div>
+        <div class="screen" data-screen="plan">
+          <p class="bar">To: a friend</p>
+          <p class="bubble me">Meeting Sam at the taco place on Fifth, 7:30. Text me at 9:40? If you don’t hear “I’m home” by 11:30, call me.</p>
+          <p class="bubble them">ok!! have fun</p>
+          <p class="type">Message</p>
+        </div>
+        <div class="screen" data-screen="report">
+          <p class="bar">Sample chat</p>
+          <p class="bubble them">my card got declined at the station, can u send $200? i’ll pay you back tonight</p>
+          <p class="caution"><b>Be careful.</b> This message asks for money. Never send money to someone you have not met.</p>
+          <div class="decide"><span>Report</span><span>Block</span></div>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li data-step="verified" data-time="6:40 pm">
+          <p class="time">6:40 pm</p>
+          <h3>Verified adult.</h3>
+          <p>An ID and a selfie, once, before anyone sees you. We keep the result, not the ID.</p>
+        </li>
+        <li data-step="consent" data-time="7:05 pm">
+          <p class="time">7:05 pm</p>
+          <h3>The vibe check takes two.</h3>
+          <p>No message before you both like each other. Try it: one yes is not enough.</p>
+          <div class="consent" role="group" aria-labelledby="consent-label">
+            <p id="consent-label" class="sr">Mutual consent, played by you for both people</p>
+            <div class="moon" aria-hidden="true"><i class="half you"></i><i class="half them"></i></div>
+            <div class="sides">
+              <button type="button" class="side you" aria-pressed="false" data-side="you">You: yes</button>
+              <button type="button" class="side them" aria-pressed="false" data-side="them">Sam: yes</button>
+            </div>
+            <p class="consent-state" aria-live="polite" data-none="Nobody said yes. Nothing happens." data-one="One yes. Nothing is sent, and nobody is told." data-both="Both said yes. Now you can talk.">Nobody said yes. Nothing happens.</p>
+            <p class="label">Illustrative. Sam is a sample, and you play both sides.</p>
+          </div>
+        </li>
+        <li data-step="plan" data-time="7:30 pm">
+          <p class="time">7:30 pm</p>
+          <h3>Tell a friend the plan.</h3>
+          <p>Where, who, and when you’ll be home. Write it here, then send it from your phone. Fumbl sends nothing.</p>
+          <form class="plan" id="plan" novalidate>
+            <label>Where<input name="where" autocomplete="off" value="the taco place on Fifth"></label>
+            <label>Who<input name="who" autocomplete="off" value="Sam"></label>
+            <label>Home by<input name="by" type="time" value="23:30"></label>
+            <output name="text" for="where who by" aria-live="polite"></output>
+            <div class="plan-btns">
+              <button type="button" class="btn" id="plan-share">Share it</button>
+              <button type="button" class="btn" id="plan-copy">Copy it</button>
+            </div>
+            <p class="label" id="plan-said" aria-live="polite"></p>
+          </form>
+        </li>
+        <li data-step="report" data-time="9:40 pm">
+          <p class="time">9:40 pm</p>
+          <h3>Report and block: one tap, anywhere.</h3>
+          <p>On every profile and in every chat. A block is instant and silent, and every report gets a decision and a reason. The app warns you when a new match asks for money.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="how">
-    <h2 id="how">How it works</h2>
-    <ol class="steps">
-      <li><strong>Sign in and check your age.</strong> Then a first name, who you want to meet, what you are looking for.</li>
-      <li><strong>Meet one person at a time.</strong> Like or pass. When you have seen everyone, we say so.</li>
-      <li><strong>Talk when you both said yes.</strong> And leave whenever you like, with one tap.</li>
-    </ol>
+  <section class="plate window" aria-labelledby="games-title" data-time="10:15 pm">
+    <div class="plate-media" aria-hidden="true"><video class="loop" muted loop playsinline preload="none" data-src="media/window"></video></div>
+    <div class="plate-words">
+      <h2 id="games-title"><span>Like</span> <span class="vs">and</span> <span>pass</span> are the same size.</h2>
+      <p>No countdowns. No fake activity. No blurred teasers to make you pay.</p>
+    </div>
+    <p class="credit">Generated footage, not a real street.</p>
+  </section>
+
+  <section class="promises" aria-labelledby="promises-title" data-time="10:50 pm">
+    <h2 id="promises-title" class="kicker">The fine print, in big print</h2>
+    <ul>
+      <li><b>18+.</b> <span>A date of birth, not a tick box.</span></li>
+      <li><b>No photos.</b> <span>Not yet, not of anyone. Profiles are words and a drawing.</span></li>
+      <li><b>Never your location.</b> <span>Or your contacts.</span></li>
+      <li><b>Your chat is yours.</b> <span>Only the two of you read it. We never sell your data or use it for ads.</span></li>
+      <li><b>Agents run the company.</b> <span>Our team are AI agents, and they say so. They never pose as members or write to you as a person.</span></li>
+    </ul>
+  </section>
+
+  <section class="plate home-plate" aria-labelledby="home-title" data-time="11:52 pm">
+    <div class="plate-media" aria-hidden="true"><video class="loop" muted loop playsinline preload="none" data-src="media/home"></video></div>
+    <div class="plate-words">
+      <h2 id="home-title">I’m home.</h2>
+      <div class="btns">
+        <a class="btn primary" href="app/live.html">Join Fumbl</a>
+        <a class="btn" href="app/">Try the demo first</a>
+      </div>
+      <p class="legal"><strong class="no-checks">FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong> Read our <a href="safety.html">safety tips</a> before you meet anyone. You sign in with a CommandAGI account; the demo runs on fictional sample profiles, in your browser only.</p>
+    </div>
+    <p class="credit">Generated footage, not a real home.</p>
   </section>
 </main>
 
@@ -85,5 +195,6 @@
   <button type="button" class="btn" id="lang-close" commandfor="lang-dialog" command="close">Close</button>
 </dialog>
 <script src="locale.js"></script>
+<script src="home.js" type="module"></script>
 </body>
 </html>
