@@ -53,9 +53,11 @@ python3 redesign/render-og.py   render og.png and touch-icon.png
 
 ## deploy
 
-`commandagi sites deploy . --prod` from this folder, with the account signed in on the computer (the site is
-`Sites/Fumbl` on the login's Drive; a seed also publishes `org-fumbl`'s `sites/fumbl`). Custom domains are the owner's:
-`commandagi sites domains fumbl add <domain>` prints the CNAME and TXT records to add.
+The seed publishes this site: push to `main`, then bump the pin in `scripts/release/org-sites.csv` of the CommandAGI
+repository and run `node scripts/seed/run.mjs sites-org-fumbl prod --apply` (dev first). The site is `org-fumbl`'s
+`sites/fumbl`, and it owns the slug `fumbl`. Do not deploy this folder with `commandagi sites deploy`: that makes a second
+site that claims the same slug. Custom domains are the owner's: `commandagi sites domains fumbl add <domain>` prints the
+CNAME and TXT records to add.
 
 `live.html` is served by CommandAGI's api worker at `/fumbl/*`. That is a CommandAGI-internal surface for this one
 company, not CommandAGI's public API: a real backend of Fumbl's own would own the members, likes, matches, messages,
