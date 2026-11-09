@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>The Fumbl app | Fumbl</title>
+<meta name="description" content="Fumbl is a phone app: a free dating app for adults in the United States. What the app does, where it is, and how to try it today.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="touch-icon.png">
+<link rel="canonical" href="https://fumbl.commandagi.app/app.html">
+<link rel="alternate" hreflang="en" href="https://fumbl.commandagi.app/app.html">
+<link rel="alternate" hreflang="es" href="https://fumbl.commandagi.app/es/app.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fumbl.commandagi.app/zh/app.html">
+<link rel="alternate" hreflang="x-default" href="https://fumbl.commandagi.app/app.html">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="mark.svg" alt="" width="34" height="34">fumbl</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="app.html" aria-current="page">The app</a>
+      <a href="safety.html">Safety</a>
+      <a href="app/">Try the demo</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <article class="prose">
+    <h1>Fumbl is a phone app.</h1>
+    <p>Dating happens where you are, so the app is the product. This site tells you what Fumbl is and shows you the rules. The member flow lives in the app.</p>
+
+    <section class="app-card" aria-labelledby="stores">
+      <h2 id="stores">Get the app</h2>
+      <p><strong>Not in the App Store or Google Play yet.</strong> Both stores are reviewing the CommandAGI app, which carries Fumbl. We add the store links here the day a listing is live, and not before.</p>
+      <p>Fumbl is free, for adults (18+) in the United States.</p>
+      <div class="btns">
+        <a class="btn primary" href="app/">Try the demo</a>
+        <a class="btn" href="app/live.html">Join in your browser</a>
+      </div>
+      <p class="label">The demo runs on fictional sample profiles, in your browser only. Joining in a browser uses a CommandAGI account and the same ID age check as the app.</p>
+    </section>
+
+    <section class="app-card" aria-labelledby="inside">
+      <h2 id="inside">What the app does</h2>
+      <ul>
+        <li><strong>Join with a date of birth</strong>, then an ID and selfie age check before anyone sees you. We keep the result, not the ID.</li>
+        <li><strong>Browse one person at a time.</strong> Swipe, or use the Like and Pass buttons. They are the same size.</li>
+        <li><strong>Talk only after you both like each other.</strong> A match opens a conversation. Nothing opens before.</li>
+        <li><strong>Report and block</strong> on every profile and in every conversation. A block is instant and silent.</li>
+        <li><strong>Notices</strong> on your phone for a new match and a new message.</li>
+        <li><strong>Your data is yours.</strong> Export it, or delete your Fumbl profile, likes, matches and conversations from the app.</li>
+      </ul>
+    </section>
+
+    <section class="app-card" aria-labelledby="rules">
+      <h2 id="rules">Before you meet anyone</h2>
+      <p class="no-checks"><strong>FUMBL DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR IDENTITY SCREENING OF ITS MEMBERS.</strong></p>
+      <p>Read our <a href="safety.html">safety notice and tips</a>. The <a href="terms.html">terms</a> and the <a href="privacy.html">privacy notice</a> say what we keep and why.</p>
+    </section>
+  </article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Fumbl, a company of CommandAGI &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; hello@fumbl.commandagi.com</span>
+    <span><a href="index.html">Home</a> &middot; <a href="safety.html">Safety</a> &middot; <a href="app/">Demo</a> &middot; <a href="team.html">Team</a></span>
+  </div>
+    <div class="wrap"><span class="langs"><button type="button" class="lang-btn" id="lang-btn" aria-haspopup="dialog" commandfor="lang-dialog" command="show-modal" aria-label="Language">A/文</button></span></div>
+  <p class="lang-hint" id="lang-hint" hidden></p>
+</footer>
+<dialog id="lang-dialog" class="lang-dialog" aria-labelledby="lang-title">
+  <h2 id="lang-title">Choose a language</h2>
+  <ul class="lang-list">
+    <li><a href="app.html" lang="en" aria-current="true">English</a></li>
+    <li><a href="es/app.html" lang="es">Español</a></li>
+    <li><a href="zh/app.html" lang="zh-Hans">简体中文</a></li>
+  </ul>
+  <button type="button" class="btn" id="lang-close" commandfor="lang-dialog" command="close">Close</button>
+</dialog>
+<script src="locale.js"></script>
+</body>
+</html>

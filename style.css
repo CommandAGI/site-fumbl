@@ -345,3 +345,6 @@ video.loop.playing { opacity: 1; }
 /* Chinese headings: CJK has no width axis to squeeze, and needs air between lines and glyphs */
 :lang(zh) :is(.fumble, .plate h2, .promises b, .night-head h2, .steps h3) { letter-spacing: 0; line-height: 1.08; }
 :lang(zh) .fumble { font-size: clamp(3rem, 8vw, 8rem); }
+/* The app page: framed cards on the paper */
+.app-card { margin: 28px 0 0; padding: 4px 22px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.app-card h2 { margin-top: 22px; }
